@@ -1,0 +1,10 @@
+{
+  "name": "i_love_anime",
+  "version": "0.1.0",
+  "author": "Evan Hahn",
+  "license": "WTFPL",
+  "dependencies": {
+    "express": "3.x",
+    "jade": "*"
+  }
+}

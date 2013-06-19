@@ -1,0 +1,114 @@
+extends ../layout
+
+block content
+  script(type="text/javascript").
+    function proddel(id) {
+      $.ajax({
+        type : "POST",
+        dataType : "json",
+        url : "/product/delete",
+        data : {
+          id : id
+        },
+        success : function(res) {
+          $("#lblmsg").html(res.dec).show();
+          if (res.res)
+            if (res.u)
+              location.href = res.u;
+            else
+              location.href = "/product";
+        }
+      });
+    }
+  style(type="text/css").
+    .pagination ul>li>input {
+      vertical-align: top;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      height: auto;
+      *height: 22px;
+      margin-bottom: 0px;
+      background-color: #fff;
+      border-left-width: 0;
+      width: 40px;
+      float: left;
+      min-height: auto;
+      *min-height: 22px;
+      padding-top: 12px;
+    }
+
+  include ../menu
+  div(class="container")
+    h2(style="float: left;") 产品列表
+    p(style="position: relative; height: 36px;")
+      a(href="/product/add",style="position:absolute; margin-left:10px; bottom:6px;") 新产品 
+      span(id="lblmsg", style="position:absolute; margin-left:80px; bottom:6px; color:red; display:none;") 
+      
+    table(class="table table-striped")
+      tr
+        th 产品ＩＤ
+        th 产品名称
+        th 供应商
+        th 目录
+        th 单位数量
+        th 单价
+        th 库存
+        th 是否停产
+        th 
+      each product in products
+        tr
+          td= product.productID
+          td= product.productName 
+          td= product.supplierID
+          each cate in catelist
+            if product.categoryID==cate.categoryID
+              td= cate.categoryName
+          td= product.quantityPerUnit
+          td= product.unitPrice
+          td= product.unitsInStock
+          td= product.discontinued=="1"?"是":"否"
+          td 
+            a(href='/product/edit/'+product._id) 修改
+            =" | "
+            a(href='#', onclick="javascript:proddel('#{product._id}');return false;") 删除
+    div(class="pagination pagination-right")
+      ul
+        li
+          a(href="#", style="color:#000;cursor:text;")="总记录数："+total
+        if curpage<=1
+          li(class="disabled")
+            a(href="/product/") 首页
+        else
+          li
+            a(href="/product/") 首页
+        if curpage<=1
+          li(class="disabled")
+            a(href="/product?page="+(curpage - 1)) Previous
+        else
+          li
+            a(href="/product?page="+(curpage - 1)) Previous
+        - var page = 1 
+        while page<=totalpage
+          if page == curpage
+            li(class="disabled")
+              a(href="/product?page="+page)=page
+          else
+            a(href="/product?page="+page)=page
+          - page++
+        if curpage>=totalpage
+          li(class="disabled")
+            a(href="/product?page="+(parseInt(curpage) + 1)) Next
+        else
+          li
+            a(href="/product?page="+(parseInt(curpage) + 1)) Next
+        if curpage>=totalpage
+          li(class="disabled")
+            a(href="/product?page="+totalpage) 尾页
+        else
+          li
+            a(href="/product?page="+totalpage) 尾页
+        li
+          input(type="text", class="input", id="topage", value=curpage)
+        li
+          a(href="javascript:void();", onclick="location.href='/product?page='+$('#topage').val();return false;") Go

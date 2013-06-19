@@ -1,0 +1,93 @@
+extends ../layout
+
+block content
+  include ../menu
+
+  script(type="text/javascript").
+    // wait for the DOM to be loaded
+    $(document).ready(function() {
+      var ajaxProjectImageListOptions = {
+        dataType : 'json',
+        success : function(result) {
+          $("#lblmsg").html(result.dec).show();
+          if(result.res){
+            if (result.u)
+              location.href = result.u;
+            else
+              location.href = "/product";
+          }
+        }
+      };
+      $('form').ajaxForm(ajaxProjectImageListOptions);
+    });
+
+  style(type="text/css").
+    .controls label {
+      display: inline;
+    }
+
+  form(class="form-horizontal", action="/product/save/"+(product && product._id || ""), method="post")
+    include ../menu
+    .container
+      section(id="list")
+      input(type="hidden", name="product[productID]", value=product==null?"":product.productID)
+      input(type="hidden", name="u", value=u)
+      .control-group
+        .control-label 产品名称
+        .controls
+          input(type="input", name="product[productName]", value=product&&product.productName||"")
+      .control-group
+        .control-label 供应商
+        .controls
+          input(type="input", name="product[supplierID]", value=product==null?"":product.supplierID)
+      .control-group
+        .control-label 目录
+        .controls
+          select(name="product[categoryID]")
+            if catelist != null
+              each cate in catelist
+                if product!=null && cate.categoryID==product.categoryID
+                  option(value=cate.categoryID, selected="selected")=cate.categoryName
+                else
+                  option(value=cate.categoryID)=cate.categoryName
+      .control-group
+        .control-label 单位数量
+        .controls
+          input(type="input", name="product[quantityPerUnit]", value=product==null?"":product.quantityPerUnit)
+      .control-group
+        .control-label 单价
+        .controls
+          input(type="input", name="product[unitPrice]", value=product==null?"":product.unitPrice)
+      .control-group
+        .control-label 库存
+        .controls
+          input(type="input", name="product[unitsInStock]", value=product==null?"":product.unitsInStock)
+      .control-group
+        .control-label 订购量
+        .controls
+          input(type="input", name="product[unitsOnOrder]", value=product==null?"":product.unitsOnOrder)
+      .control-group
+        .control-label 再订购
+        .controls
+          input(type="input", name="product[reorderLevel]", value=product==null?"":product.reorderLevel)
+      .control-group
+        .control-label 是否停产
+        .controls
+          label(class="radio inline")
+            if product!=null&&product.discontinued=="1"
+              input(type="radio", value="1", name="product[discontinued]", checked="checked")
+              是 
+            else
+              input(type="radio", value="1", name="product[discontinued]")
+              是
+          label(class="radio inline")
+            if product!=null&&product.discontinued=="0"
+              input(type="radio", value="0", name="product[discontinued]", checked="checked") 
+              否
+            else
+              input(type="radio", value="0", name="product[discontinued]") 
+              否
+      .form-actions
+        button(type="submit", class="btn btn-primary") 保存更改
+        button(class="btn", onclick="location.href='/product/';return false;") 取消
+        span(style="color:red;margin-left:10px;displsy:none;", id="lblmsg") 

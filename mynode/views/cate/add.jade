@@ -1,0 +1,47 @@
+extends ../layout
+
+block content
+  include ../menu
+
+  script(type="text/javascript").
+    // wait for the DOM to be loaded
+    $(document).ready(function() {
+      var ajaxProjectImageListOptions = {
+        dataType : 'json',
+        success : function(result) {
+          $("#lblmsg").html(result.dec).show();
+          if(result.res){
+            if (result.u)
+              location.href = result.u;
+            else
+              location.href = "/cate";
+          }
+        }
+      };
+      $('form').ajaxForm(ajaxProjectImageListOptions);
+    });
+
+  style(type="text/css").
+    .controls label {
+      display: inline;
+    }
+
+  form(class="form-horizontal", action="/cate/save/", method="post")
+    include ../menu
+    .container
+      section(id="list")
+      input(type="hidden", name="cate[_id]", value=cate==null?"":cate._id)
+      input(type="hidden", name="cate[categoryID]", value=cate==null?"":cate.categoryID)
+      input(type="hidden", name="u", value=u)
+      .control-group
+        .control-label 目录名
+        .controls
+          input(type="input", name="cate[categoryName]", value=cate&&cate.categoryName||"")
+      .control-group
+        .control-label 说明
+        .controls
+          input(type="input", name="cate[description]", value=cate==null?"":cate.description)
+      .form-actions
+        button(type="submit", class="btn btn-primary") 保存更改
+        button(class="btn", onclick="location.href='/cate';return false;") 取消
+        span(style="color:red;margin-left:10px;displsy:none;", id="lblmsg") 

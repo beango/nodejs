@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+  script(type="text/javascript").
+    function catedel(id) {
+      $.ajax({
+        type : "GET",
+        dataType : "json",
+        url : "/cate/delete/"+id,
+        success : function(res) {
+          $("#lblmsg").html(res.dec).show();
+          if (res.res)
+            if (res.u)
+              location.href = res.u;
+            else
+              location.href = "/cate";
+        }
+      });
+    }
+  include ../menu
+  div(class="container")
+    h2(style="float: left;") 产品目录列表
+    p(style="position: relative; height: 36px;")
+      a(href="/cate/add",style="position:absolute; margin-left:10px; bottom:6px;") 新目录 
+      span(id="lblmsg", style="position:absolute; margin-left:80px; bottom:6px; color:red; display:none;") 
+      
+    table(class="table table-striped")
+      tr
+        th 权限ＩＤ
+        th 权限名
+        th 说明
+        th 
+      each cate in catelist
+        tr
+          td= cate.categoryID
+          td= cate.categoryName 
+          td= cate.description
+          td 
+            a(href='/cate/edit/'+cate._id) 修改
+            =" | "
+            a(href='#', onclick="javascript:catedel('#{cate._id}');return false;") 删除

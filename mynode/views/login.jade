@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  script(type="text/javascript").
+    // wait for the DOM to be loaded
+    $(document).ready(function() {
+      var ajaxProjectImageListOptions = {
+        dataType : 'json',
+        success : function(result) {
+          if (result.res) {
+            location.href = "/";
+          } else
+            $("#txterr").html(result.dec);
+        }
+      };
+      $('form').ajaxForm(ajaxProjectImageListOptions);
+    }); 
+  form(action="/loginchk", method="post", class="form-horizontal")
+    .control-group
+      .control-label 用户名:
+      .controls
+        input(type="text", name="username")
+    .control-group
+      .control-label 密 码:
+      .controls
+        input(name="password")
+    .form-actions
+      input(type="submit", class="btn btn-primary", value="登录")
+      span(style="width:100px;")    
+      input(value="重置", type="reset")
+      span(style="color:red", id="txterr")

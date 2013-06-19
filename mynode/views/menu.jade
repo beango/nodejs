@@ -1,0 +1,28 @@
+header(class="jumbotron subhead", id="overview")
+  div(class="subnav subnav-fixed")
+    ul(class="nav nav-pills")
+      li
+        a(href="user!list.action")
+          i(class="icon-user") 
+          用户管理
+      li
+        a(href="role!list.action")
+          i(class="icon-book")
+          角色管理
+      li
+        a(href="auth!list.action")
+          i(class="icon-book")
+          权限管理
+      li
+        a(href="/product")
+          i(class="icon-th-list")
+          产品管理
+      li
+        a(href="/cate")
+          i(class="icon-align-left")
+          产品目录
+      li(style="width:200px;")
+        a(style="width:70px;display:inline-block;")
+          i(class="icon-home")
+          =user && user.userName || ""
+        a(style="width:40px;display:inline-block;", href="/logout") 注销
