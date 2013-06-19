@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+  include ../menu
+
+  script(type="text/javascript").
+    // wait for the DOM to be loaded
+    $(document).ready(function() {
+      var ajaxProjectImageListOptions = {
+        dataType : 'json',
+        success : function(result) {
+          $("#lblmsg").html(result.dec).show();
+          if(result.res){
+            if (result.u)
+              location.href = result.u;
+            else
+              location.href = "/role";
+          }
+        }
+      };
+      $('form').ajaxForm(ajaxProjectImageListOptions);
+    });
+
+  style(type="text/css").
+    .controls label {
+      display: inline;
+    }
+
+  form(class="form-horizontal", action="/role/save/", method="post")
+    include ../menu
+    .container
+      section(id="list")
+      input(type="hidden", name="role[_id]", value=roleinfo==null?"":roleinfo._id)
+      input(type="hidden", name="role[roleID]", value=roleinfo==null?"":roleinfo.roleID)
+      input(type="hidden", name="u", value=u)
+      .control-group
+        .control-label 角色名
+        .controls
+          input(type="input", name="role[roleName]", value=roleinfo&&roleinfo.roleName||"")
+      .form-actions
+        button(type="submit", class="btn btn-primary") 保存更改
+        button(class="btn", onclick="location.href='/role';return false;") 取消
+        span(style="color:red;margin-left:10px;displsy:none;", id="lblmsg") 

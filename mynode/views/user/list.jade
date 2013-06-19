@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+  script(type="text/javascript").
+    function userdel(id) {
+      $.ajax({
+        type : "GET",
+        dataType : "json",
+        url : "/user/delete/"+id,
+        success : function(res) {
+          $("#lblmsg").html(res.dec).show();
+          if (res.res)
+            if (res.u)
+              location.href = res.u;
+            else
+              location.href = "/cate";
+        }
+      });
+    }
+  include ../menu
+  div(class="container")
+    h2(style="float: left;") 用户列表
+    p(style="position: relative; height: 36px;")
+      a(href="/user/add",style="position:absolute; margin-left:10px; bottom:6px;") 新用户 
+      span(id="lblmsg", style="position:absolute; margin-left:80px; bottom:6px; color:red; display:none;") 
+      
+    table(class="table table-striped")
+      tr
+        th 用户ＩＤ
+        th 用户名
+        th 用户密码
+        th 
+      each user in userlist
+        tr
+          td= user.userID
+          td= user.userName 
+          td= user.userPwd
+          td 
+            a(href='/user/role/'+user._id) 角色
+            =" | "
+            a(href='/user/edit/'+user._id) 修改
+            =" | "
+            a(href='#', onclick="javascript:userdel('#{user._id}');return false;") 删除

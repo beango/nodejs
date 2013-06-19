@@ -1,0 +1,47 @@
+extends ../layout
+
+block content
+  include ../menu
+
+  script(type="text/javascript").
+    // wait for the DOM to be loaded
+    $(document).ready(function() {
+      var ajaxProjectImageListOptions = {
+        dataType : 'json',
+        success : function(result) {
+          $("#lblmsg").html(result.dec).show();
+          if(result.res){
+            if (result.u)
+              location.href = result.u;
+            else
+              location.href = "/user";
+          }
+        }
+      };
+      $('form').ajaxForm(ajaxProjectImageListOptions);
+    });
+
+  style(type="text/css").
+    .controls label {
+      display: inline;
+    }
+
+  form(class="form-horizontal", action="/user/save/", method="post")
+    include ../menu
+    .container
+      section(id="list")
+      input(type="hidden", name="useraccount[_id]", value=useraccount==null?"":useraccount._id)
+      input(type="hidden", name="useraccount[userID]", value=useraccount==null?"":useraccount.userID)
+      input(type="hidden", name="u", value=u)
+      .control-group
+        .control-label 用户名
+        .controls
+          input(type="input", name="useraccount[userName]", value=useraccount&&useraccount.userName||"")
+      .control-group
+        .control-label 密码
+        .controls
+          input(type="input", name="useraccount[userPwd]", value=useraccount&&useraccount.userPwd||"")
+      .form-actions
+        button(type="submit", class="btn btn-primary") 保存更改
+        button(class="btn", onclick="location.href='/user';return false;") 取消
+        span(style="color:red;margin-left:10px;displsy:none;", id="lblmsg") 

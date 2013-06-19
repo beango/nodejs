@@ -16,10 +16,11 @@ function defineModels(mongoose, fn) {
   UserAccount = new Schema({
       userID:Number,
       userName:String,
-      userPwd:String
+      userPwd:String,
+      roleID: Array
   }, { collection: 'UserAccount', versionKey: false});
 
-  UserAccount.virtual('id')
+  /*UserAccount.virtual('id')
     .get(function() {
       return this._id.toHexString();
     });
@@ -42,7 +43,7 @@ function defineModels(mongoose, fn) {
     } else {
       next();
     }
-  });
+  });*/
 
   mongoose.model('UserAccount', UserAccount);
 

@@ -38,7 +38,9 @@ app.configure('production', function(){
 var todo = require('./controllers/todo'),
 	product = require('./controllers/product'),
 	user = require('./controllers/user'),
-  cate = require('./controllers/cate');
+    cate = require('./controllers/cate'),
+    role = require('./controllers/role'),
+    auth = require('./controllers/auth');
 
 var checkauth = function(req, res, next) {
   if(req.cookies.logintoken){
@@ -56,6 +58,28 @@ var checkauth = function(req, res, next) {
 }
 
 app.get('/',checkauth, todo.index);
+
+app.get('/user',checkauth, user.index);
+app.get('/user/add',checkauth, user.add);
+app.post('/user/save/',checkauth, user.save);
+app.get('/user/edit/:id',checkauth, user.edit);
+app.get('/user/delete/:id',checkauth, user.delete);
+app.get('/user/role/:id',checkauth, user.role);
+app.post('/user/userrole/:id',checkauth, user.userrole);
+
+app.get('/role',checkauth, role.index);
+app.get('/role/add',checkauth, role.add);
+app.post('/role/save/',checkauth, role.save);
+app.get('/role/edit/:id',checkauth, role.edit);
+app.get('/role/delete/:id',checkauth, role.delete);
+app.get('/role/auth/:id',checkauth, role.auth);
+app.post('/role/roleauth/:id',checkauth, role.roleauth);
+
+app.get('/auth',checkauth, auth.index);
+app.get('/auth/add',checkauth, auth.add);
+app.post('/auth/save/',checkauth, auth.save);
+app.get('/auth/edit/:id',checkauth, auth.edit);
+app.get('/auth/delete/:id',checkauth, auth.delete);
 
 app.get('/product',checkauth, product.index);
 app.get('/product/add',checkauth, product.add);

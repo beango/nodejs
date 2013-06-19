@@ -1,0 +1,45 @@
+extends ../layout
+
+block content
+  include ../menu
+
+  script(type="text/javascript").
+    $(document).ready(function() {
+      var ajaxProjectImageListOptions = {
+        dataType : 'json',
+        success : function(result) {
+          $("#lblmsg").html(result.dec).show();
+          if(result.res){
+            if (result.u)
+              location.href = result.u;
+            else
+              location.href = "/user";
+          }
+        }
+      };
+      $('form').ajaxForm(ajaxProjectImageListOptions);
+    });
+
+  form(class="form-horizontal", action="/user/userrole/"+useraccount._id, method="post")
+    include ../menu
+    .container
+      h2 用户角色设置
+      section(id="list")
+      input(type="hidden", name="userrole[userID]", value=useraccount==null?"":useraccount.userID)
+      table(class="table table-striped", style="width:200px")
+        tr
+          th 角色名
+        each role in rolelist
+          tr
+            td
+              label(class="checkbox")
+                - if ((useraccount.roleID+",").indexOf(role.roleID+",")>-1)
+                  input(type="checkbox", name="userrole[roleID]", value=role.roleID, checked="checked")
+                  =role.roleName
+                - else
+                  input(type="checkbox", name="userrole[roleID]", value=role.roleID)
+                  =role.roleName
+      .form-actions
+        button(type="submit", class="btn btn-primary") 保存更改
+        button(class="btn", onclick="location.href='/user';return false;") 取消
+        span(style="color:red;margin-left:10px;displsy:none;", id="lblmsg") 

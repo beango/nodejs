@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+  script(type="text/javascript").
+    function roledel(id) {
+      $.ajax({
+        type : "GET",
+        dataType : "json",
+        url : "/role/delete/"+id,
+        success : function(res) {
+          $("#lblmsg").html(res.dec).show();
+          if (res.res)
+            if (res.u)
+              location.href = res.u;
+            else
+              location.href = "/role";
+        }
+      });
+    }
+  include ../menu
+  div(class="container")
+    h2(style="float: left;") 角色列表
+    p(style="position: relative; height: 36px;")
+      a(href="/role/add",style="position:absolute; margin-left:10px; bottom:6px;") 新角色 
+      span(id="lblmsg", style="position:absolute; margin-left:80px; bottom:6px; color:red; display:none;") 
+      
+    table(class="table table-striped")
+      tr
+        th 角色ＩＤ
+        th 角色名
+        th 
+      each role in rolelist
+        tr
+          td= role.roleID
+          td= role.roleName 
+          td 
+            a(href='/role/auth/'+role._id) 权限
+            =" | "
+            a(href='/role/edit/'+role._id) 修改
+            =" | "
+            a(href='#', onclick="javascript:roledel('#{role._id}');return false;") 删除

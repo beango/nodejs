@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+  include ../menu
+
+  script(type="text/javascript").
+    // wait for the DOM to be loaded
+    $(document).ready(function() {
+      var ajaxProjectImageListOptions = {
+        dataType : 'json',
+        success : function(result) {
+          $("#lblmsg").html(result.dec).show();
+          if(result.res){
+            if (result.u)
+              location.href = result.u;
+            else
+              location.href = "/auth";
+          }
+        }
+      };
+      $('form').ajaxForm(ajaxProjectImageListOptions);
+    });
+
+  style(type="text/css").
+    .controls label {
+      display: inline;
+    }
+
+  form(class="form-horizontal", action="/auth/save/", method="post")
+    include ../menu
+    .container
+      section(id="list")
+      input(type="hidden", name="authinfo[_id]", value=auth==null?"":auth._id)
+      input(type="hidden", name="authinfo[authID]", value=auth==null?"":auth.authID)
+      input(type="hidden", name="u", value=u)
+      .control-group
+        .control-label 权限名
+        .controls
+          input(type="input", name="authinfo[authName]", value=auth&&auth.authName||"")
+      .form-actions
+        button(type="submit", class="btn btn-primary") 保存更改
+        button(class="btn", onclick="location.href='/auth';return false;") 取消
+        span(style="color:red;margin-left:10px;displsy:none;", id="lblmsg") 
