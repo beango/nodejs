@@ -46,8 +46,10 @@ exports.edit = function(id, postuser, callback) {
         else {
             doc.userName = postuser.userName;
             doc.userPwd = postuser.userPwd;
-            doc.roleID = postuser.roleID;
-
+            if(null!=postuser.roleID && postuser.roleID.length > 0)
+                doc.roleID = postuser.roleID;
+            else
+                doc.roleID = undefined;
             doc.save(function(err) {
                 if (err) {
                     util.log('FATAL '+ err);
