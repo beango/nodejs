@@ -2,10 +2,11 @@
 
 var util = require('util');
 var config = require('../config');
-var db = require('../dao/roleDao');
+var dbtype = require('../config').dbtype;
+var db = require(dbtype+'roleDao');
 
 exports.index = function (req, res, next) {
-    db.allRoles(function (err, roles) {
+    db.all(function (err, roles) {
         if (err) {
             return next(err);
         }
@@ -31,25 +32,35 @@ exports.edit = function (req, res, next) {
 };
 
 exports.save = function (req, res, next) {
-    var rolePost = mongoose.model('Role');
-    var role = new Role(req.body.role);
+    var id=req.params.id;
+    var role = req.body.role;
   
-	if(role._id){
-		db.edit(role._id,role,function (err, result) {
-			if (err) {
-				return next(err);
-			}
-			res.jsonp({res:true, dec:"修改用户成功！", u:"/role"});
-		});
+	if(id){
+        db.findRoleById(id, function (err, _role) {
+            if (err) {
+                return next(err);
+            }
+            if (!_role) {
+                return next();
+            }
+            role.authID = _role.authID;
+            db.edit(id,role,function (err, result) {
+                if (err) {
+                    util.log("修改用户资料出错！");
+                    return next(err);
+                }
+                res.jsonp({res:true, dec:"修改用户成功！", u:"/role"});
+            });
+        });
 	}
 	else{
 		db.add(role,function (err, result) {
 			if (err) {
 				res.jsonp({res:false, dec:"添加用户失败！"+err});
 			}
-      else
-			  res.jsonp({res:true, dec:"添加用户成功！", u:"/role"});
-		});
+            else
+                  res.jsonp({res:true, dec:"添加用户成功！", u:"/role"});
+            });
 	}
 };
 
@@ -72,8 +83,8 @@ exports.auth = function (req, res, next) {
         if (!role) {
             return next();
         }
-        var authdb = require("../dao/authdao");
-        authdb.allAuths(function(err,auths){
+        var authdb = require(dbtype+"authdao");
+        authdb.all(function(err,auths){
             if(err)
                 next(err);
             res.render("role/auth", {user: req.user, role: role, authlist: auths});
@@ -83,9 +94,7 @@ exports.auth = function (req, res, next) {
 
 exports.roleauth = function (req, res, next) {
     var id = req.params.id;
-    var rolemodels = require("../model/role");
-    var Role = rolemodels.Role;
-    var role = new Role(req.body.roleauth);
+    var role = req.body.roleauth;
     db.findRoleById(id,function(err,_role){
         if(err)
             next(err);

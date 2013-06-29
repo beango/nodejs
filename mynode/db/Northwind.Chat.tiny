@@ -1,0 +1,65 @@
+Chat1.user	"系统"
+Chat1.date	"2013-06-29 15:03:32"
+Chat1.msg	"Test上线！"
+Chat1.chatID	1
+Chat1._key	"Chat1"
+Chat2.user	"系统"
+Chat2.date	"2013-06-29 15:03:36"
+Chat2.msg	"Admin上线！"
+Chat2.chatID	2
+Chat2._key	"Chat2"
+Chat3.user	"Admin"
+Chat3.date	"2013-06-29 15:03:49"
+Chat3.msg	"大家好，我来啦"
+Chat3.chatID	3
+Chat3._key	"Chat3"
+Chat4.user	"系统"
+Chat4.date	"2013-06-29 15:03:55"
+Chat4.msg	"Admin下线！"
+Chat4.chatID	4
+Chat4._key	"Chat4"
+Chat5.user	"系统"
+Chat5.date	"2013-06-29 15:04:43"
+Chat5.msg	"Test下线！"
+Chat5.chatID	5
+Chat5._key	"Chat5"
+Chat6.user	"系统"
+Chat6.date	"2013-06-29 15:04:44"
+Chat6.msg	"Test上线！"
+Chat6.chatID	6
+Chat6._key	"Chat6"
+Chat7.user	"系统"
+Chat7.date	"2013-06-29 15:05:12"
+Chat7.msg	"Admin上线！"
+Chat7.chatID	7
+Chat7._key	"Chat7"
+Chat8.user	"系统"
+Chat8.date	"2013-06-29 15:07:03"
+Chat8.msg	"Test下线！"
+Chat8.chatID	8
+Chat8._key	"Chat8"
+Chat9.user	"系统"
+Chat9.date	"2013-06-29 15:08:34"
+Chat9.msg	"Admin下线！"
+Chat9.chatID	9
+Chat9._key	"Chat9"
+Chat10.user	"系统"
+Chat10.date	"2013-06-29 15:15:01"
+Chat10.msg	"Test上线！"
+Chat10.chatID	10
+Chat10._key	"Chat10"
+Chat11.user	"系统"
+Chat11.date	"2013-06-29 15:15:08"
+Chat11.msg	"Admin上线！"
+Chat11.chatID	11
+Chat11._key	"Chat11"
+Chat12.user	"系统"
+Chat12.date	"2013-06-29 15:24:57"
+Chat12.msg	"undefined上线！"
+Chat12.chatID	12
+Chat12._key	"Chat12"
+Chat13.user	"系统"
+Chat13.date	"2013-06-29 15:24:58"
+Chat13.msg	"undefined上线！"
+Chat13.chatID	13
+Chat13._key	"Chat13"

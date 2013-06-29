@@ -1,0 +1,50 @@
+Category1.categoryName	"Beverages"
+Category1.categoryID	1
+Category1.description	"Soft drinks, coffees, teas, beers, and ales"
+Category1.addTime	"2013-06-24 14:03:21"
+Category1._key	"Category1"
+Category2.categoryName	"Condiments"
+Category2.categoryID	2
+Category2.description	"Sweet and savory sauces, relishes, spreads, and seasonings"
+Category2.addTime	"2013-06-24 14:03:21"
+Category2._key	"Category2"
+Category3.categoryName	"Confections"
+Category3.categoryID	3
+Category3.description	"Desserts, candies, and sweet breads"
+Category3.addTime	"2013-06-24 14:03:21"
+Category3._key	"Category3"
+Category4.categoryName	"Dairy Products"
+Category4.categoryID	4
+Category4.description	"Cheeses"
+Category4.addTime	"2013-06-24 14:03:21"
+Category4._key	"Category4"
+Category5.categoryName	"Grains/Cereals"
+Category5.categoryID	5
+Category5.description	"Breads, crackers, pasta, and cereal"
+Category5.addTime	"2013-06-24 14:03:21"
+Category5._key	"Category5"
+Category6.categoryName	"Meat/Poultry"
+Category6.categoryID	6
+Category6.description	"Prepared meats"
+Category6.addTime	"2013-06-24 14:03:21"
+Category6._key	"Category6"
+Category7.categoryName	"Produce"
+Category7.categoryID	7
+Category7.description	"Dried fruit and bean curd"
+Category7.addTime	"2013-06-24 14:03:21"
+Category7._key	"Category7"
+Category8.categoryName	"Seafood"
+Category8.categoryID	8
+Category8.description	"Seaweed and fish"
+Category8.addTime	"2013-06-24 14:03:21"
+Category8._key	"Category8"
+Category9.categoryID	9
+Category9.description	"1"
+Category9.categoryName	"c1"
+Category9.addTime	"2013-06-24 14:03:21"
+Category9._key	"Category9"
+Category11.categoryID	11
+Category11.description	"2"
+Category11.categoryName	"c2"
+Category11.addTime	"2013-06-24 14:03:22"
+Category11._key	"Category11"

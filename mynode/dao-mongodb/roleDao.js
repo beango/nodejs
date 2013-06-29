@@ -1,8 +1,16 @@
 var util = require('util');
 var mongoose = require('mongoose');
 var models = require('../model/role');
-
 var Role = models.Role;
+var dburl = require("../config").db;//数据库地址
+
+exports.connect = function(callback) {
+    mongoose.connect(dburl);
+}
+
+exports.disconnect = function(callback) {
+    mongoose.disconnect(callback);
+}
 
 exports.add = function(postrole,callback) {
     var newrole = new Role();
@@ -58,12 +66,12 @@ exports.edit = function(id, postrole, callback) {
     });
 }
 
-exports.allRoles = function(callback) {
+exports.all = function(callback) {
     Role.find({}).sort("roleID").exec(callback);
 }
 
 var findRoleById = exports.findRoleById = function(id,callback){
-    Role.findOne({_id:id},function(err,doc){
+    Role.findOne({roleID:id},function(err,doc){
         if (err) {
             util.log('FATAL '+ err);
             callback(err, null);

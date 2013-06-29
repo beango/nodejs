@@ -1,0 +1,15 @@
+Role2.roleID	2
+Role2.roleName	"系统管理员"
+Role2.authID	[28,29,30]
+Role2.addTime	"2013-06-24 14:03:21"
+Role2._key	"Role2"
+Role3.roleID	3
+Role3.roleName	"产品管理员"
+Role3.authID	[27]
+Role3.addTime	"2013-06-24 14:03:21"
+Role3._key	"Role3"
+Role11.roleID	11
+Role11.roleName	"r1"
+Role11.authID	[]
+Role11.addTime	"2013-06-24 14:03:21"
+Role11._key	"Role11"

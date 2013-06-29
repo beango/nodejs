@@ -20,7 +20,7 @@ block content
       $('form').ajaxForm(ajaxProjectImageListOptions);
     });
 
-  form(class="form-horizontal", action="/role/roleauth/"+role._id, method="post")
+  form(class="form-horizontal", action="/role/roleauth/"+role.roleID, method="post")
     include ../menu
     .container
       h2 角色权限设置

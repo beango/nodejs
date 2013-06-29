@@ -26,11 +26,10 @@ block content
       display: inline;
     }
 
-  form(class="form-horizontal", action="/role/save/", method="post")
+  form(class="form-horizontal", action="/role/save/"+(roleinfo&&roleinfo.roleID||""), method="post")
     include ../menu
     .container
       section(id="list")
-      input(type="hidden", name="role[_id]", value=roleinfo==null?"":roleinfo._id)
       input(type="hidden", name="role[roleID]", value=roleinfo==null?"":roleinfo.roleID)
       input(type="hidden", name="u", value=u)
       .control-group

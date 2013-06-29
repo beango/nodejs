@@ -1,0 +1,948 @@
+Product1.supplierID	1
+Product1.quantityPerUnit	"10 boxes x 20 bags"
+Product1.productName	"Chai"
+Product1.unitsOnOrder	0
+Product1.reorderLevel	10
+Product1.categoryID	1
+Product1.discontinued	false
+Product1.unitsInStock	39
+Product1.productID	1
+Product1.unitPrice	18
+Product1.addTime	"2013-06-24 14:03:21"
+Product1._key	"Product1"
+Product2.supplierID	1
+Product2.quantityPerUnit	"24 - 12 oz bottles"
+Product2.productName	"Chang"
+Product2.unitsOnOrder	40
+Product2.reorderLevel	25
+Product2.categoryID	1
+Product2.discontinued	false
+Product2.unitsInStock	17
+Product2.productID	2
+Product2.unitPrice	19
+Product2.addTime	"2013-06-24 14:03:21"
+Product2._key	"Product2"
+Product3.supplierID	1
+Product3.quantityPerUnit	"12 - 550 ml bottles"
+Product3.productName	"Aniseed Syrup"
+Product3.unitsOnOrder	70
+Product3.reorderLevel	25
+Product3.categoryID	2
+Product3.discontinued	false
+Product3.unitsInStock	13
+Product3.productID	3
+Product3.unitPrice	10
+Product3.addTime	"2013-06-24 14:03:21"
+Product3._key	"Product3"
+Product4.supplierID	2
+Product4.quantityPerUnit	"48 - 6 oz jars"
+Product4.productName	"Chef Anton's Cajun Seasoning"
+Product4.unitsOnOrder	0
+Product4.reorderLevel	0
+Product4.categoryID	2
+Product4.discontinued	false
+Product4.unitsInStock	53
+Product4.productID	4
+Product4.unitPrice	22
+Product4.addTime	"2013-06-24 14:03:21"
+Product4._key	"Product4"
+Product5.supplierID	2
+Product5.quantityPerUnit	"36 boxes"
+Product5.productName	"Chef Anton's Gumbo Mix"
+Product5.unitsOnOrder	0
+Product5.reorderLevel	0
+Product5.categoryID	2
+Product5.discontinued	true
+Product5.unitsInStock	0
+Product5.productID	5
+Product5.unitPrice	21.350000381469727
+Product5.addTime	"2013-06-24 14:03:21"
+Product5._key	"Product5"
+Product6.supplierID	3
+Product6.quantityPerUnit	"12 - 8 oz jars"
+Product6.productName	"Grandma's Boysenberry Spread"
+Product6.unitsOnOrder	0
+Product6.reorderLevel	25
+Product6.categoryID	2
+Product6.discontinued	false
+Product6.unitsInStock	120
+Product6.productID	6
+Product6.unitPrice	25
+Product6.addTime	"2013-06-24 14:03:21"
+Product6._key	"Product6"
+Product7.supplierID	3
+Product7.quantityPerUnit	"12 - 1 lb pkgs."
+Product7.productName	"Uncle Bob's Organic Dried Pears"
+Product7.unitsOnOrder	0
+Product7.reorderLevel	10
+Product7.categoryID	7
+Product7.discontinued	false
+Product7.unitsInStock	15
+Product7.productID	7
+Product7.unitPrice	30
+Product7.addTime	"2013-06-24 14:03:21"
+Product7._key	"Product7"
+Product8.supplierID	3
+Product8.quantityPerUnit	"12 - 12 oz jars"
+Product8.productName	"Northwoods Cranberry Sauce"
+Product8.unitsOnOrder	0
+Product8.reorderLevel	0
+Product8.categoryID	2
+Product8.discontinued	false
+Product8.unitsInStock	6
+Product8.productID	8
+Product8.unitPrice	40
+Product8.addTime	"2013-06-24 14:03:21"
+Product8._key	"Product8"
+Product9.supplierID	4
+Product9.quantityPerUnit	"18 - 500 g pkgs."
+Product9.productName	"Mishi Kobe Niku"
+Product9.unitsOnOrder	0
+Product9.reorderLevel	0
+Product9.categoryID	6
+Product9.discontinued	true
+Product9.unitsInStock	29
+Product9.productID	9
+Product9.unitPrice	97
+Product9.addTime	"2013-06-24 14:03:21"
+Product9._key	"Product9"
+Product10.supplierID	4
+Product10.quantityPerUnit	"12 - 200 ml jars"
+Product10.productName	"Ikura"
+Product10.unitsOnOrder	0
+Product10.reorderLevel	0
+Product10.categoryID	8
+Product10.discontinued	false
+Product10.unitsInStock	31
+Product10.productID	10
+Product10.unitPrice	31
+Product10.addTime	"2013-06-24 14:03:22"
+Product10._key	"Product10"
+Product11.supplierID	5
+Product11.quantityPerUnit	"1 kg pkg."
+Product11.productName	"Queso Cabrales"
+Product11.unitsOnOrder	30
+Product11.reorderLevel	30
+Product11.categoryID	4
+Product11.discontinued	false
+Product11.unitsInStock	22
+Product11.productID	11
+Product11.unitPrice	21
+Product11.addTime	"2013-06-24 14:03:22"
+Product11._key	"Product11"
+Product12.supplierID	5
+Product12.quantityPerUnit	"10 - 500 g pkgs."
+Product12.productName	"Queso Manchego La Pastora"
+Product12.unitsOnOrder	0
+Product12.reorderLevel	0
+Product12.categoryID	4
+Product12.discontinued	false
+Product12.unitsInStock	86
+Product12.productID	12
+Product12.unitPrice	38
+Product12.addTime	"2013-06-24 14:03:22"
+Product12._key	"Product12"
+Product13.supplierID	6
+Product13.quantityPerUnit	"2 kg box"
+Product13.productName	"Konbu"
+Product13.unitsOnOrder	0
+Product13.reorderLevel	5
+Product13.categoryID	8
+Product13.discontinued	false
+Product13.unitsInStock	24
+Product13.productID	13
+Product13.unitPrice	6
+Product13.addTime	"2013-06-24 14:03:22"
+Product13._key	"Product13"
+Product14.supplierID	6
+Product14.quantityPerUnit	"40 - 100 g pkgs."
+Product14.productName	"Tofu"
+Product14.unitsOnOrder	0
+Product14.reorderLevel	0
+Product14.categoryID	7
+Product14.discontinued	false
+Product14.unitsInStock	35
+Product14.productID	14
+Product14.unitPrice	23.25
+Product14.addTime	"2013-06-24 14:03:22"
+Product14._key	"Product14"
+Product15.supplierID	6
+Product15.quantityPerUnit	"24 - 250 ml bottles"
+Product15.productName	"Genen Shouyu"
+Product15.unitsOnOrder	0
+Product15.reorderLevel	5
+Product15.categoryID	2
+Product15.discontinued	false
+Product15.unitsInStock	39
+Product15.productID	15
+Product15.unitPrice	15.5
+Product15.addTime	"2013-06-24 14:03:22"
+Product15._key	"Product15"
+Product16.supplierID	7
+Product16.quantityPerUnit	"32 - 500 g boxes"
+Product16.productName	"Pavlova"
+Product16.unitsOnOrder	0
+Product16.reorderLevel	10
+Product16.categoryID	3
+Product16.discontinued	false
+Product16.unitsInStock	29
+Product16.productID	16
+Product16.unitPrice	17.450000762939453
+Product16.addTime	"2013-06-24 14:03:22"
+Product16._key	"Product16"
+Product17.supplierID	7
+Product17.quantityPerUnit	"20 - 1 kg tins"
+Product17.productName	"Alice Mutton"
+Product17.unitsOnOrder	0
+Product17.reorderLevel	0
+Product17.categoryID	6
+Product17.discontinued	true
+Product17.unitsInStock	0
+Product17.productID	17
+Product17.unitPrice	39
+Product17.addTime	"2013-06-24 14:03:22"
+Product17._key	"Product17"
+Product18.supplierID	7
+Product18.quantityPerUnit	"16 kg pkg."
+Product18.productName	"Carnarvon Tigers"
+Product18.unitsOnOrder	0
+Product18.reorderLevel	0
+Product18.categoryID	8
+Product18.discontinued	false
+Product18.unitsInStock	42
+Product18.productID	18
+Product18.unitPrice	62.5
+Product18.addTime	"2013-06-24 14:03:22"
+Product18._key	"Product18"
+Product19.supplierID	8
+Product19.quantityPerUnit	"10 boxes x 12 pieces"
+Product19.productName	"Teatime Chocolate Biscuits"
+Product19.unitsOnOrder	0
+Product19.reorderLevel	5
+Product19.categoryID	3
+Product19.discontinued	false
+Product19.unitsInStock	25
+Product19.productID	19
+Product19.unitPrice	9.199999809265137
+Product19.addTime	"2013-06-24 14:03:22"
+Product19._key	"Product19"
+Product20.supplierID	8
+Product20.quantityPerUnit	"30 gift boxes"
+Product20.productName	"Sir Rodney's Marmalade"
+Product20.unitsOnOrder	0
+Product20.reorderLevel	0
+Product20.categoryID	3
+Product20.discontinued	false
+Product20.unitsInStock	40
+Product20.productID	20
+Product20.unitPrice	81
+Product20.addTime	"2013-06-24 14:03:22"
+Product20._key	"Product20"
+Product21.supplierID	8
+Product21.quantityPerUnit	"24 pkgs. x 4 pieces"
+Product21.productName	"Sir Rodney's Scones"
+Product21.unitsOnOrder	40
+Product21.reorderLevel	5
+Product21.categoryID	3
+Product21.discontinued	false
+Product21.unitsInStock	3
+Product21.productID	21
+Product21.unitPrice	10
+Product21.addTime	"2013-06-24 14:03:23"
+Product21._key	"Product21"
+Product22.supplierID	9
+Product22.quantityPerUnit	"24 - 500 g pkgs."
+Product22.productName	"Gustaf's Kn㢫ebr񡾀"
+Product22.unitsOnOrder	0
+Product22.reorderLevel	25
+Product22.categoryID	5
+Product22.discontinued	false
+Product22.unitsInStock	104
+Product22.productID	22
+Product22.unitPrice	21
+Product22.addTime	"2013-06-24 14:03:23"
+Product22._key	"Product22"
+Product23.supplierID	9
+Product23.quantityPerUnit	"12 - 250 g pkgs."
+Product23.productName	"Tunnbr񡾀"
+Product23.unitsOnOrder	0
+Product23.reorderLevel	25
+Product23.categoryID	5
+Product23.discontinued	false
+Product23.unitsInStock	61
+Product23.productID	23
+Product23.unitPrice	9
+Product23.addTime	"2013-06-24 14:03:23"
+Product23._key	"Product23"
+Product24.supplierID	10
+Product24.quantityPerUnit	"12 - 355 ml cans"
+Product24.productName	"Guaranant಴ica"
+Product24.unitsOnOrder	0
+Product24.reorderLevel	0
+Product24.categoryID	1
+Product24.discontinued	true
+Product24.unitsInStock	20
+Product24.productID	24
+Product24.unitPrice	4.5
+Product24.addTime	"2013-06-24 14:03:23"
+Product24._key	"Product24"
+Product25.supplierID	11
+Product25.quantityPerUnit	"20 - 450 g glasses"
+Product25.productName	"NuNuCa NuݭNougat-Creme"
+Product25.unitsOnOrder	0
+Product25.reorderLevel	30
+Product25.categoryID	3
+Product25.discontinued	false
+Product25.unitsInStock	76
+Product25.productID	25
+Product25.unitPrice	14
+Product25.addTime	"2013-06-24 14:03:23"
+Product25._key	"Product25"
+Product26.supplierID	11
+Product26.quantityPerUnit	"100 - 250 g bags"
+Product26.productName	"Gumb㰠Gummib㱣hen"
+Product26.unitsOnOrder	0
+Product26.reorderLevel	0
+Product26.categoryID	3
+Product26.discontinued	false
+Product26.unitsInStock	15
+Product26.productID	26
+Product26.unitPrice	31.229999542236328
+Product26.addTime	"2013-06-24 14:03:23"
+Product26._key	"Product26"
+Product27.supplierID	11
+Product27.quantityPerUnit	"100 - 100 g pieces"
+Product27.productName	"Schoggi Schokolade"
+Product27.unitsOnOrder	0
+Product27.reorderLevel	30
+Product27.categoryID	3
+Product27.discontinued	false
+Product27.unitsInStock	49
+Product27.productID	27
+Product27.unitPrice	43.900001525878906
+Product27.addTime	"2013-06-24 14:03:23"
+Product27._key	"Product27"
+Product28.supplierID	12
+Product28.quantityPerUnit	"25 - 825 g cans"
+Product28.productName	"R񲲬e Sauerkraut"
+Product28.unitsOnOrder	0
+Product28.reorderLevel	0
+Product28.categoryID	7
+Product28.discontinued	true
+Product28.unitsInStock	26
+Product28.productID	28
+Product28.unitPrice	45.599998474121094
+Product28.addTime	"2013-06-24 14:03:23"
+Product28._key	"Product28"
+Product29.supplierID	12
+Product29.quantityPerUnit	"50 bags x 30 sausgs."
+Product29.productName	"Th�ringer Rostbratwurst"
+Product29.unitsOnOrder	0
+Product29.reorderLevel	0
+Product29.categoryID	6
+Product29.discontinued	true
+Product29.unitsInStock	0
+Product29.productID	29
+Product29.unitPrice	123.79000091552734
+Product29.addTime	"2013-06-24 14:03:23"
+Product29._key	"Product29"
+Product30.supplierID	13
+Product30.quantityPerUnit	"10 - 200 g glasses"
+Product30.productName	"Nord-Ost Matjeshering"
+Product30.unitsOnOrder	0
+Product30.reorderLevel	15
+Product30.categoryID	8
+Product30.discontinued	false
+Product30.unitsInStock	10
+Product30.productID	30
+Product30.unitPrice	25.889999389648438
+Product30.addTime	"2013-06-24 14:03:23"
+Product30._key	"Product30"
+Product31.supplierID	14
+Product31.quantityPerUnit	"12 - 100 g pkgs"
+Product31.productName	"Gorgonzola Telino"
+Product31.unitsOnOrder	70
+Product31.reorderLevel	20
+Product31.categoryID	4
+Product31.discontinued	false
+Product31.unitsInStock	0
+Product31.productID	31
+Product31.unitPrice	12.5
+Product31.addTime	"2013-06-24 14:03:24"
+Product31._key	"Product31"
+Product32.supplierID	14
+Product32.quantityPerUnit	"24 - 200 g pkgs."
+Product32.productName	"Mascarpone Fabioli"
+Product32.unitsOnOrder	40
+Product32.reorderLevel	25
+Product32.categoryID	4
+Product32.discontinued	false
+Product32.unitsInStock	9
+Product32.productID	32
+Product32.unitPrice	32
+Product32.addTime	"2013-06-24 14:03:24"
+Product32._key	"Product32"
+Product33.supplierID	15
+Product33.quantityPerUnit	"500 g"
+Product33.productName	"Geitost"
+Product33.unitsOnOrder	0
+Product33.reorderLevel	20
+Product33.categoryID	4
+Product33.discontinued	false
+Product33.unitsInStock	112
+Product33.productID	33
+Product33.unitPrice	2.5
+Product33.addTime	"2013-06-24 14:03:24"
+Product33._key	"Product33"
+Product34.supplierID	16
+Product34.quantityPerUnit	"24 - 12 oz bottles"
+Product34.productName	"Sasquatch Ale"
+Product34.unitsOnOrder	0
+Product34.reorderLevel	15
+Product34.categoryID	1
+Product34.discontinued	false
+Product34.unitsInStock	111
+Product34.productID	34
+Product34.unitPrice	14
+Product34.addTime	"2013-06-24 14:03:24"
+Product34._key	"Product34"
+Product35.supplierID	16
+Product35.quantityPerUnit	"24 - 12 oz bottles"
+Product35.productName	"Steeleye Stout"
+Product35.unitsOnOrder	0
+Product35.reorderLevel	15
+Product35.categoryID	1
+Product35.discontinued	false
+Product35.unitsInStock	20
+Product35.productID	35
+Product35.unitPrice	18
+Product35.addTime	"2013-06-24 14:03:24"
+Product35._key	"Product35"
+Product36.supplierID	17
+Product36.quantityPerUnit	"24 - 250 g  jars"
+Product36.productName	"Inlagd Sill"
+Product36.unitsOnOrder	0
+Product36.reorderLevel	20
+Product36.categoryID	8
+Product36.discontinued	false
+Product36.unitsInStock	112
+Product36.productID	36
+Product36.unitPrice	19
+Product36.addTime	"2013-06-24 14:03:24"
+Product36._key	"Product36"
+Product37.supplierID	17
+Product37.quantityPerUnit	"12 - 500 g pkgs."
+Product37.productName	"Gravad lax"
+Product37.unitsOnOrder	50
+Product37.reorderLevel	25
+Product37.categoryID	8
+Product37.discontinued	false
+Product37.unitsInStock	11
+Product37.productID	37
+Product37.unitPrice	26
+Product37.addTime	"2013-06-24 14:03:24"
+Product37._key	"Product37"
+Product38.supplierID	18
+Product38.quantityPerUnit	"12 - 75 cl bottles"
+Product38.productName	"C󳣠de Blaye"
+Product38.unitsOnOrder	0
+Product38.reorderLevel	15
+Product38.categoryID	1
+Product38.discontinued	false
+Product38.unitsInStock	17
+Product38.productID	38
+Product38.unitPrice	263.5
+Product38.addTime	"2013-06-24 14:03:24"
+Product38._key	"Product38"
+Product39.supplierID	18
+Product39.quantityPerUnit	"750 cc per bottle"
+Product39.productName	"Chartreuse verte"
+Product39.unitsOnOrder	0
+Product39.reorderLevel	5
+Product39.categoryID	1
+Product39.discontinued	false
+Product39.unitsInStock	69
+Product39.productID	39
+Product39.unitPrice	18
+Product39.addTime	"2013-06-24 14:03:24"
+Product39._key	"Product39"
+Product40.supplierID	19
+Product40.quantityPerUnit	"24 - 4 oz tins"
+Product40.productName	"Boston Crab Meat"
+Product40.unitsOnOrder	0
+Product40.reorderLevel	30
+Product40.categoryID	8
+Product40.discontinued	false
+Product40.unitsInStock	123
+Product40.productID	40
+Product40.unitPrice	18.399999618530273
+Product40.addTime	"2013-06-24 14:03:24"
+Product40._key	"Product40"
+Product41.supplierID	19
+Product41.quantityPerUnit	"12 - 12 oz cans"
+Product41.productName	"Jack's New England Clam Chowder"
+Product41.unitsOnOrder	0
+Product41.reorderLevel	10
+Product41.categoryID	8
+Product41.discontinued	false
+Product41.unitsInStock	85
+Product41.productID	41
+Product41.unitPrice	9.649999618530273
+Product41.addTime	"2013-06-24 14:03:24"
+Product41._key	"Product41"
+Product42.supplierID	20
+Product42.quantityPerUnit	"32 - 1 kg pkgs."
+Product42.productName	"Singaporean Hokkien Fried Mee"
+Product42.unitsOnOrder	0
+Product42.reorderLevel	0
+Product42.categoryID	5
+Product42.discontinued	true
+Product42.unitsInStock	26
+Product42.productID	42
+Product42.unitPrice	14
+Product42.addTime	"2013-06-24 14:03:25"
+Product42._key	"Product42"
+Product43.supplierID	20
+Product43.quantityPerUnit	"16 - 500 g tins"
+Product43.productName	"Ipoh Coffee"
+Product43.unitsOnOrder	10
+Product43.reorderLevel	25
+Product43.categoryID	1
+Product43.discontinued	false
+Product43.unitsInStock	17
+Product43.productID	43
+Product43.unitPrice	46
+Product43.addTime	"2013-06-24 14:03:25"
+Product43._key	"Product43"
+Product44.supplierID	20
+Product44.quantityPerUnit	"20 - 2 kg bags"
+Product44.productName	"Gula Malacca"
+Product44.unitsOnOrder	0
+Product44.reorderLevel	15
+Product44.categoryID	2
+Product44.discontinued	false
+Product44.unitsInStock	27
+Product44.productID	44
+Product44.unitPrice	19.450000762939453
+Product44.addTime	"2013-06-24 14:03:25"
+Product44._key	"Product44"
+Product45.supplierID	21
+Product45.quantityPerUnit	"1k pkg."
+Product45.productName	"Rogede sild"
+Product45.unitsOnOrder	70
+Product45.reorderLevel	15
+Product45.categoryID	8
+Product45.discontinued	false
+Product45.unitsInStock	5
+Product45.productID	45
+Product45.unitPrice	9.5
+Product45.addTime	"2013-06-24 14:03:25"
+Product45._key	"Product45"
+Product46.supplierID	21
+Product46.quantityPerUnit	"4 - 450 g glasses"
+Product46.productName	"Spegesild"
+Product46.unitsOnOrder	0
+Product46.reorderLevel	0
+Product46.categoryID	8
+Product46.discontinued	false
+Product46.unitsInStock	95
+Product46.productID	46
+Product46.unitPrice	12
+Product46.addTime	"2013-06-24 14:03:25"
+Product46._key	"Product46"
+Product47.supplierID	22
+Product47.quantityPerUnit	"10 - 4 oz boxes"
+Product47.productName	"Zaanse koeken"
+Product47.unitsOnOrder	0
+Product47.reorderLevel	0
+Product47.categoryID	3
+Product47.discontinued	false
+Product47.unitsInStock	36
+Product47.productID	47
+Product47.unitPrice	9.5
+Product47.addTime	"2013-06-24 14:03:25"
+Product47._key	"Product47"
+Product48.supplierID	22
+Product48.quantityPerUnit	"10 pkgs."
+Product48.productName	"Chocolade"
+Product48.unitsOnOrder	70
+Product48.reorderLevel	25
+Product48.categoryID	3
+Product48.discontinued	false
+Product48.unitsInStock	15
+Product48.productID	48
+Product48.unitPrice	12.75
+Product48.addTime	"2013-06-24 14:03:25"
+Product48._key	"Product48"
+Product49.supplierID	23
+Product49.quantityPerUnit	"24 - 50 g pkgs."
+Product49.productName	"Maxilaku"
+Product49.unitsOnOrder	60
+Product49.reorderLevel	15
+Product49.categoryID	3
+Product49.discontinued	false
+Product49.unitsInStock	10
+Product49.productID	49
+Product49.unitPrice	20
+Product49.addTime	"2013-06-24 14:03:25"
+Product49._key	"Product49"
+Product50.supplierID	23
+Product50.quantityPerUnit	"12 - 100 g bars"
+Product50.productName	"Valkoinen suklaa"
+Product50.unitsOnOrder	0
+Product50.reorderLevel	30
+Product50.categoryID	3
+Product50.discontinued	false
+Product50.unitsInStock	65
+Product50.productID	50
+Product50.unitPrice	16.25
+Product50.addTime	"2013-06-24 14:03:25"
+Product50._key	"Product50"
+Product51.supplierID	24
+Product51.quantityPerUnit	"50 - 300 g pkgs."
+Product51.productName	"Manjimup Dried Apples"
+Product51.unitsOnOrder	0
+Product51.reorderLevel	10
+Product51.categoryID	7
+Product51.discontinued	false
+Product51.unitsInStock	20
+Product51.productID	51
+Product51.unitPrice	53
+Product51.addTime	"2013-06-24 14:03:25"
+Product51._key	"Product51"
+Product52.supplierID	24
+Product52.quantityPerUnit	"16 - 2 kg boxes"
+Product52.productName	"Filo Mix"
+Product52.unitsOnOrder	0
+Product52.reorderLevel	25
+Product52.categoryID	5
+Product52.discontinued	false
+Product52.unitsInStock	38
+Product52.productID	52
+Product52.unitPrice	7
+Product52.addTime	"2013-06-24 14:03:25"
+Product52._key	"Product52"
+Product53.supplierID	24
+Product53.quantityPerUnit	"48 pieces"
+Product53.productName	"Perth Pasties"
+Product53.unitsOnOrder	0
+Product53.reorderLevel	0
+Product53.categoryID	6
+Product53.discontinued	true
+Product53.unitsInStock	0
+Product53.productID	53
+Product53.unitPrice	32.79999923706055
+Product53.addTime	"2013-06-24 14:03:26"
+Product53._key	"Product53"
+Product54.supplierID	25
+Product54.quantityPerUnit	"16 pies"
+Product54.productName	"Tourti籥"
+Product54.unitsOnOrder	0
+Product54.reorderLevel	10
+Product54.categoryID	6
+Product54.discontinued	false
+Product54.unitsInStock	21
+Product54.productID	54
+Product54.unitPrice	7.449999809265137
+Product54.addTime	"2013-06-24 14:03:26"
+Product54._key	"Product54"
+Product55.supplierID	25
+Product55.quantityPerUnit	"24 boxes x 2 pies"
+Product55.productName	"Pᵩ chinois"
+Product55.unitsOnOrder	0
+Product55.reorderLevel	20
+Product55.categoryID	6
+Product55.discontinued	false
+Product55.unitsInStock	115
+Product55.productID	55
+Product55.unitPrice	24
+Product55.addTime	"2013-06-24 14:03:26"
+Product55._key	"Product55"
+Product56.supplierID	26
+Product56.quantityPerUnit	"24 - 250 g pkgs."
+Product56.productName	"Gnocchi di nonna Alice"
+Product56.unitsOnOrder	10
+Product56.reorderLevel	30
+Product56.categoryID	5
+Product56.discontinued	false
+Product56.unitsInStock	21
+Product56.productID	56
+Product56.unitPrice	38
+Product56.addTime	"2013-06-24 14:03:26"
+Product56._key	"Product56"
+Product57.supplierID	26
+Product57.quantityPerUnit	"24 - 250 g pkgs."
+Product57.productName	"Ravioli Angelo"
+Product57.unitsOnOrder	0
+Product57.reorderLevel	20
+Product57.categoryID	5
+Product57.discontinued	false
+Product57.unitsInStock	36
+Product57.productID	57
+Product57.unitPrice	19.5
+Product57.addTime	"2013-06-24 14:03:26"
+Product57._key	"Product57"
+Product58.supplierID	27
+Product58.quantityPerUnit	"24 pieces"
+Product58.productName	"Escargots de Bourgogne"
+Product58.unitsOnOrder	0
+Product58.reorderLevel	20
+Product58.categoryID	8
+Product58.discontinued	false
+Product58.unitsInStock	62
+Product58.productID	58
+Product58.unitPrice	13.25
+Product58.addTime	"2013-06-24 14:03:26"
+Product58._key	"Product58"
+Product59.supplierID	28
+Product59.quantityPerUnit	"5 kg pkg."
+Product59.productName	"Raclette Courdavault"
+Product59.unitsOnOrder	0
+Product59.reorderLevel	0
+Product59.categoryID	4
+Product59.discontinued	false
+Product59.unitsInStock	79
+Product59.productID	59
+Product59.unitPrice	55
+Product59.addTime	"2013-06-24 14:03:26"
+Product59._key	"Product59"
+Product60.supplierID	28
+Product60.quantityPerUnit	"15 - 300 g rounds"
+Product60.productName	"Camembert Pierrot"
+Product60.unitsOnOrder	0
+Product60.reorderLevel	0
+Product60.categoryID	4
+Product60.discontinued	false
+Product60.unitsInStock	19
+Product60.productID	60
+Product60.unitPrice	34
+Product60.addTime	"2013-06-24 14:03:26"
+Product60._key	"Product60"
+Product61.supplierID	29
+Product61.quantityPerUnit	"24 - 500 ml bottles"
+Product61.productName	"Sirop d'象ble"
+Product61.unitsOnOrder	0
+Product61.reorderLevel	25
+Product61.categoryID	2
+Product61.discontinued	false
+Product61.unitsInStock	113
+Product61.productID	61
+Product61.unitPrice	28.5
+Product61.addTime	"2013-06-24 14:03:26"
+Product61._key	"Product61"
+Product62.supplierID	29
+Product62.quantityPerUnit	"48 pies"
+Product62.productName	"Tarte au sucre"
+Product62.unitsOnOrder	0
+Product62.reorderLevel	0
+Product62.categoryID	3
+Product62.discontinued	false
+Product62.unitsInStock	17
+Product62.productID	62
+Product62.unitPrice	49.29999923706055
+Product62.addTime	"2013-06-24 14:03:26"
+Product62._key	"Product62"
+Product63.supplierID	7
+Product63.quantityPerUnit	"15 - 625 g jars"
+Product63.productName	"Vegie-spread"
+Product63.unitsOnOrder	0
+Product63.reorderLevel	5
+Product63.categoryID	2
+Product63.discontinued	false
+Product63.unitsInStock	24
+Product63.productID	63
+Product63.unitPrice	43.900001525878906
+Product63.addTime	"2013-06-24 14:03:26"
+Product63._key	"Product63"
+Product64.supplierID	12
+Product64.quantityPerUnit	"20 bags x 4 pieces"
+Product64.productName	"Wimmers gute Semmelkn񣤬"
+Product64.unitsOnOrder	80
+Product64.reorderLevel	30
+Product64.categoryID	5
+Product64.discontinued	false
+Product64.unitsInStock	22
+Product64.productID	64
+Product64.unitPrice	33.25
+Product64.addTime	"2013-06-24 14:03:27"
+Product64._key	"Product64"
+Product65.supplierID	2
+Product65.quantityPerUnit	"32 - 8 oz bottles"
+Product65.productName	"Louisiana Fiery Hot Pepper Sauce"
+Product65.unitsOnOrder	0
+Product65.reorderLevel	0
+Product65.categoryID	2
+Product65.discontinued	false
+Product65.unitsInStock	76
+Product65.productID	65
+Product65.unitPrice	21.049999237060547
+Product65.addTime	"2013-06-24 14:03:27"
+Product65._key	"Product65"
+Product66.supplierID	2
+Product66.quantityPerUnit	"24 - 8 oz jars"
+Product66.productName	"Louisiana Hot Spiced Okra"
+Product66.unitsOnOrder	100
+Product66.reorderLevel	20
+Product66.categoryID	2
+Product66.discontinued	false
+Product66.unitsInStock	4
+Product66.productID	66
+Product66.unitPrice	17
+Product66.addTime	"2013-06-24 14:03:27"
+Product66._key	"Product66"
+Product67.supplierID	16
+Product67.quantityPerUnit	"24 - 12 oz bottles"
+Product67.productName	"Laughing Lumberjack Lager"
+Product67.unitsOnOrder	0
+Product67.reorderLevel	10
+Product67.categoryID	1
+Product67.discontinued	false
+Product67.unitsInStock	52
+Product67.productID	67
+Product67.unitPrice	14
+Product67.addTime	"2013-06-24 14:03:27"
+Product67._key	"Product67"
+Product68.supplierID	8
+Product68.quantityPerUnit	"10 boxes x 8 pieces"
+Product68.productName	"Scottish Longbreads"
+Product68.unitsOnOrder	10
+Product68.reorderLevel	15
+Product68.categoryID	3
+Product68.discontinued	false
+Product68.unitsInStock	6
+Product68.productID	68
+Product68.unitPrice	12.5
+Product68.addTime	"2013-06-24 14:03:27"
+Product68._key	"Product68"
+Product69.supplierID	15
+Product69.quantityPerUnit	"10 kg pkg."
+Product69.productName	"Gudbrandsdalsost"
+Product69.unitsOnOrder	0
+Product69.reorderLevel	15
+Product69.categoryID	4
+Product69.discontinued	false
+Product69.unitsInStock	26
+Product69.productID	69
+Product69.unitPrice	36
+Product69.addTime	"2013-06-24 14:03:27"
+Product69._key	"Product69"
+Product70.supplierID	7
+Product70.quantityPerUnit	"24 - 355 ml bottles"
+Product70.productName	"Outback Lager"
+Product70.unitsOnOrder	10
+Product70.reorderLevel	30
+Product70.categoryID	1
+Product70.discontinued	false
+Product70.unitsInStock	15
+Product70.productID	70
+Product70.unitPrice	15
+Product70.addTime	"2013-06-24 14:03:27"
+Product70._key	"Product70"
+Product71.supplierID	15
+Product71.quantityPerUnit	"10 - 500 g pkgs."
+Product71.productName	"Flotemysost"
+Product71.unitsOnOrder	0
+Product71.reorderLevel	0
+Product71.categoryID	4
+Product71.discontinued	false
+Product71.unitsInStock	26
+Product71.productID	71
+Product71.unitPrice	21.5
+Product71.addTime	"2013-06-24 14:03:27"
+Product71._key	"Product71"
+Product72.supplierID	14
+Product72.quantityPerUnit	"24 - 200 g pkgs."
+Product72.productName	"Mozzarella di Giovanni"
+Product72.unitsOnOrder	0
+Product72.reorderLevel	0
+Product72.categoryID	4
+Product72.discontinued	false
+Product72.unitsInStock	14
+Product72.productID	72
+Product72.unitPrice	34.79999923706055
+Product72.addTime	"2013-06-24 14:03:27"
+Product72._key	"Product72"
+Product73.supplierID	17
+Product73.quantityPerUnit	"24 - 150 g jars"
+Product73.productName	"R񢟋aviar"
+Product73.unitsOnOrder	0
+Product73.reorderLevel	5
+Product73.categoryID	8
+Product73.discontinued	false
+Product73.unitsInStock	101
+Product73.productID	73
+Product73.unitPrice	15
+Product73.addTime	"2013-06-24 14:03:27"
+Product73._key	"Product73"
+Product74.supplierID	4
+Product74.quantityPerUnit	"5 kg pkg."
+Product74.productName	"Longlife Tofu"
+Product74.unitsOnOrder	20
+Product74.reorderLevel	5
+Product74.categoryID	7
+Product74.discontinued	false
+Product74.unitsInStock	4
+Product74.productID	74
+Product74.unitPrice	10
+Product74.addTime	"2013-06-24 14:03:28"
+Product74._key	"Product74"
+Product75.supplierID	12
+Product75.quantityPerUnit	"24 - 0.5 l bottles"
+Product75.productName	"Rh񭡲㳠Klosterbier"
+Product75.unitsOnOrder	0
+Product75.reorderLevel	25
+Product75.categoryID	1
+Product75.discontinued	false
+Product75.unitsInStock	125
+Product75.productID	75
+Product75.unitPrice	7.75
+Product75.addTime	"2013-06-24 14:03:28"
+Product75._key	"Product75"
+Product76.supplierID	23
+Product76.quantityPerUnit	"500 ml"
+Product76.productName	"Lakkalik󵱩"
+Product76.unitsOnOrder	0
+Product76.reorderLevel	20
+Product76.categoryID	1
+Product76.discontinued	false
+Product76.unitsInStock	57
+Product76.productID	76
+Product76.unitPrice	18
+Product76.addTime	"2013-06-24 14:03:28"
+Product76._key	"Product76"
+Product77.supplierID	12
+Product77.quantityPerUnit	"12 boxes"
+Product77.productName	"Original Frankfurter gr�ne Soޥ"
+Product77.unitsOnOrder	0
+Product77.reorderLevel	15
+Product77.categoryID	2
+Product77.discontinued	false
+Product77.unitsInStock	32
+Product77.productID	77
+Product77.unitPrice	13
+Product77.addTime	"2013-06-24 14:03:28"
+Product77._key	"Product77"
+Product78.categoryID	7
+Product78.discontinued	true
+Product78.productID	78
+Product78.productName	"product1"
+Product78.quantityPerUnit	"2"
+Product78.reorderLevel	6
+Product78.supplierID	1
+Product78.unitPrice	3
+Product78.unitsInStock	4
+Product78.unitsOnOrder	5
+Product78.addTime	"2013-06-24 14:03:28"
+Product78._key	"Product78"
+Product79.categoryID	1
+Product79.discontinued	false
+Product79.productID	79
+Product79.productName	"p2"
+Product79.quantityPerUnit	"3"
+Product79.reorderLevel	7
+Product79.supplierID	2
+Product79.unitPrice	4
+Product79.unitsInStock	5
+Product79.unitsOnOrder	6
+Product79.addTime	"2013-06-24 14:03:28"
+Product79._key	"Product79"

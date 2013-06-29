@@ -26,11 +26,10 @@ block content
       display: inline;
     }
 
-  form(class="form-horizontal", action="/user/save/", method="post")
+  form(class="form-horizontal", action="/user/save/"+(useraccount && useraccount.userID || ""), method="post")
     include ../menu
     .container
       section(id="list")
-      input(type="hidden", name="useraccount[_id]", value=useraccount==null?"":useraccount._id)
       input(type="hidden", name="useraccount[userID]", value=useraccount==null?"":useraccount.userID)
       input(type="hidden", name="u", value=u)
       .control-group

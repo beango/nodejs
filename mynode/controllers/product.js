@@ -2,12 +2,11 @@
 
 var util = require('util');
 var config = require('../config');
-var db = require('../dao/productDao');
-var catedb = require('../dao/cateDao');
-var mongoose = require('mongoose');
+var dbtype = require('../config').dbtype;
+var db = require(dbtype+'productDao');
+var catedb = require(dbtype+'categoryDao');
 
 exports.index = function (req, res, next) {
-    util.log(req.user.userName);
 	var page = req.param('page') > 1 ? req.param('page') : 1;
     var perPage = 15;
     var options = {
@@ -15,14 +14,14 @@ exports.index = function (req, res, next) {
         page: page
     };
 	
-    db.allProducts(options, function (err, todos) {
+    db.findByPage(options, function (err, todos) {
       if (err) {
         return next(err);
       }
       db.count(function(err,count){
         if(err)
           return next(err);
-        catedb.allCate(function (err, cates) {
+        catedb.all(function (err, cates) {
           if (err) {
             return next(err);
           }
@@ -45,7 +44,7 @@ exports.add = function (req, res, next) {
 		if (err) {
             return next(err);
         }
-        catedb.allCate(function (err, cates) {
+        catedb.all(function (err, cates) {
 			if (err) {
 				return next(err);
 			}
@@ -73,8 +72,7 @@ exports.edit = function (req, res, next) {
 
 exports.save = function (req, res, next) {
     var id = req.params.id;
-	var productPost = mongoose.model('Product');
-    var product = new productPost(req.body.product);
+    var product = req.body.product;
 	if(id){
 		db.edit(id,product,function (err, result) {
 			if (err) {

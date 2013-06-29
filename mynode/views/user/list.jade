@@ -36,8 +36,8 @@ block content
           td= user.userName 
           td= user.userPwd
           td 
-            a(href='/user/role/'+user._id) 角色
+            a(href='/user/role/'+user.userID) 角色
             =" | "
-            a(href='/user/edit/'+user._id) 修改
+            a(href='/user/edit/'+user.userID) 修改
             =" | "
-            a(href='#', onclick="javascript:userdel('#{user._id}');return false;") 删除
+            a(href='#', onclick="javascript:userdel('#{user.userID}');return false;") 删除

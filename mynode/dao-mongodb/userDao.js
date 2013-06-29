@@ -1,6 +1,15 @@
 var util = require('util');
 var mongoose = require('mongoose');
 var models = require('../model/useraccount');
+var dburl = require("../config").db;//数据库地址
+
+exports.connect = function(callback) {
+    mongoose.connect(dburl);
+}
+
+exports.disconnect = function(callback) {
+    mongoose.disconnect(callback);
+}
 
 models.defineModels(mongoose, function() {
     UserAccount = mongoose.model('UserAccount');
@@ -61,12 +70,12 @@ exports.edit = function(id, postuser, callback) {
     });
 }
 
-exports.allUsers = function(callback) {
-    UserAccount.find({}, callback);
+exports.all = function(callback) {
+    UserAccount.find({}).sort('userID').exec(null,callback);
 }
 
 var findUserById = exports.findUserById = function(id,callback){
-    UserAccount.findOne({_id:id},function(err,doc){
+    UserAccount.findOne({userID:id},function(err,doc){
         if (err) {
             util.log('FATAL '+ err);
             callback(err, null);

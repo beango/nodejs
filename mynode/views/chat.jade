@@ -1,0 +1,78 @@
+extends layout
+
+block content
+  script(src="http://localhost:3000/scripts/socket.io.min.js", type="text/javascript")
+  script(type="text/javascript").
+    var socket;
+    var firstconnect = true;
+    var tweets;
+    $(function(){
+        if(firstconnect) {
+            socket = io.connect("http://localhost:3000");
+
+            socket.on('message', function(data){ message(data); });
+            socket.on('connect', function(data){ status_update("在线"); });
+            socket.on('disconnect', function(){ 
+                status_update("离线");
+            });
+            socket.on('reconnect', function(){ status_update("Reconnected to Server"); });
+            socket.on('reconnecting', function( nextRetry ){ status_update(nextRetry/1000 + "秒后重新连接"); });
+            socket.on('reconnect_failed', function(){ message("Reconnect Failed"); });
+            socket.on('connected', function(data){ message(data); });
+            socket.on('disconnectmsg', function(data){ message(data); });
+            /*socket.on('bieber tweet', function(data){ status_update(data); });
+
+            socket.emit("set nickname","firstname");*/
+
+            tweets = setInterval(function () {
+                socket.emit('ferret', 'tobi', function (data) {
+                  console.log(data); // data will be 'woot'
+                });
+            }, 2000);
+            firstconnect = false;
+        } else {
+            socket.socket.reconnect();
+        }
+    });
+    
+    function status_update(txt){
+        document.getElementById('status').innerHTML = txt;
+    }
+
+    function disconnect() {
+        clearInterval(tweets);
+        socket.disconnect();
+    }
+     
+    function message(data) {
+        $('#message tbody').append( 
+        "<tr><td>"+data.user+"</td><td>"+data.date+"</td><td>"+data.msg+"</td></tr>");
+    }
+     
+    function esc(msg){
+        return msg.replace(/</g, '<').replace(/>/g, '>');
+    }
+     
+    function send() {
+        socket.emit('sendMsg', { msg: document.getElementById('msg').value });
+        $("#msg").val('');
+    };
+
+  include menu
+  .container
+      #form-actions
+        button(class="btn", class="btn btn-primary", onClick='disconnect()') 断开
+        ="  "
+        button(class="btn", class="btn btn-primary", onClick='send()') 发送
+        ="  "
+        textarea(type="input", id="msg", rows="2", cols="22")
+        div(id="status")
+      .control-group
+        table(id="message", class="table table-condensed")
+          thead
+            tr
+              th 用户
+              th 发送时间
+              th 消息内容
+          tbody
+      

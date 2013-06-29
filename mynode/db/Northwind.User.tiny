@@ -1,0 +1,24 @@
+User31.userID	31
+User31.userName	"Test"
+User31.userPwd	"111"
+User31.roleID	[3,2,11]
+User31.addTime	"2013-06-24 14:03:21"
+User31._key	"User31"
+User32.userID	32
+User32.userName	"Admin"
+User32.userPwd	"111"
+User32.roleID	[3,2]
+User32.addTime	"2013-06-24 14:03:21"
+User32._key	"User32"
+User34.userID	34
+User34.userName	"u"
+User34.userPwd	"1"
+User34.roleID	[]
+User34.addTime	"2013-06-24 14:03:21"
+User34._key	"User34"
+User35.userID	35
+User35.userPwd	"111"
+User35.userName	"111"
+User35.roleID	[]
+User35.addTime	"2013-06-24 14:03:21"
+User35._key	"User35"

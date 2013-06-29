@@ -7,3 +7,5 @@ exports.site_name = 'Node TODO';
 exports.site_desc = 'Very simple todo, demo for connect web dev.';
 
 exports.db = 'mongodb://localhost:27017/Northwind';
+exports.dbtype = "../dao-mongodb/";
+exports.dbpath = './db/'

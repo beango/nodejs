@@ -36,6 +36,6 @@ block content
           td= cate.categoryName 
           td= cate.description
           td 
-            a(href='/cate/edit/'+cate._id) 修改
+            a(href='/cate/edit/'+cate.categoryID) 修改
             =" | "
-            a(href='#', onclick="javascript:catedel('#{cate._id}');return false;") 删除
+            a(href='#', onclick="javascript:catedel('#{cate.categoryID}');return false;") 删除

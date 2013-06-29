@@ -2,8 +2,8 @@
 
 var util = require('util');
 var config = require('../config');
-var mongoose = require('mongoose');
-var userdb = require('../dao/userDao');
+var dbtype = require('../config').dbtype;
+var userdb = require(dbtype+'userDao');
 
 exports.login = function (req, res, next) {
 	res.render('login');
@@ -15,24 +15,24 @@ exports.loginchk = function (req, res, next) {
 	userdb.userAccountChk(account, password, function(err,user){
 		if(err)
 		  res.jsonp({res:false, dec:"登录失败！"});
-    if(user){
-      var cookieval = JSON.stringify(user);
-      res.cookie('logintoken', cookieval, { expires: new Date(Date.now() + 2 * 604800000), path: '/' });
-      res.jsonp({res:true, dec:"登录成功！", u:req.params["u"]});
-    }
-    else{
-      res.jsonp({res:false, dec:"登录失败:用户名或密码错误！"});
-    }
+        if(user){
+          var cookieval = JSON.stringify(user);
+          res.cookie('logintoken', cookieval, { expires: new Date(Date.now() + 2 * 604800000), path: '/' });
+          res.jsonp({res:true, dec:"登录成功！", u:req.params["u"]});
+        }
+        else{
+          res.jsonp({res:false, dec:"登录失败:用户名或密码错误！"});
+        }
 	});
 };
 
 exports.logout = function (req, res, next) {
 	res.clearCookie('logintoken');
-  res.redirect('/login');
+    res.redirect('/login');
 };
 
 exports.index = function (req, res, next) {
-    userdb.allUsers(function (err, users) {
+    userdb.all(function (err, users) {
         if (err) {
             return next(err);
         }
@@ -58,16 +58,25 @@ exports.edit = function (req, res, next) {
 };
 
 exports.save = function (req, res, next) {
-    var userPost = mongoose.model('UserAccount');
-    var user = new UserAccount(req.body.useraccount);
+    var id = req.params.id;
+    var user = req.body.useraccount;
   
-	if(user._id){
-		userdb.edit(user._id,user,function (err, result) {
-			if (err) {
-				return next(err);
-			}
-			res.jsonp({res:true, dec:"修改用户成功！", u:"/user"});
-		});
+	if(id){
+        userdb.findUserById(id, function (err, _user) {
+            if (err) {
+                return next(err);
+            }
+            if (!_user) {
+                return next();
+            }
+            user.roleID = _user.roleID;
+            userdb.edit(id,user,function (err, result) {
+                if (err) {
+                    return next(err);
+                }
+                res.jsonp({res:true, dec:"修改用户成功！", u:"/user"});
+            });
+        });
 	}
 	else{
 		userdb.add(user,function (err, result) {
@@ -99,8 +108,8 @@ exports.role = function (req, res, next) {
         if (!user) {
             return next();
         }
-        var roledb = require("../dao/roledao");
-        roledb.allRoles(function(err,roles){
+        var roledb = require(dbtype+"roledao");
+        roledb.all(function(err,roles){
             if(err)
                 next(err);
             res.render("user/role", {user: req.user, useraccount: user, rolelist: roles});
@@ -110,7 +119,7 @@ exports.role = function (req, res, next) {
 
 exports.userrole = function (req, res, next) {
     var id = req.params.id;
-    var useraccount = new UserAccount(req.body.userrole);
+    var useraccount = req.body.userrole;
 
     userdb.findUserById(id,function(err,useracc){
         if(err)

@@ -1,12 +1,12 @@
 "use strict";
 
 var util = require('util');
-var mongoose = require('mongoose');
 var config = require('../config');
-var db = require('../dao/cateDao');
+var dbtype = require('../config').dbtype;
+var db = require(dbtype + 'categoryDao');
 
 exports.index = function (req, res, next) {
-    db.allCate(function (err, todos) {
+    db.all(function (err, todos) {
         if (err) {
             return next(err);
         }
@@ -36,11 +36,9 @@ exports.edit = function (req, res, next) {
 };
 
 exports.save = function (req, res, next) {
-    var catePost = mongoose.model('Cate');
-    var cate = new catePost(req.body.cate);
-  
-	if(cate._id){
-		db.edit(cate._id,cate,function (err, result) {
+    var id = req.params.id;
+	if(id){
+		db.edit(id,req.body.cate,function (err, result) {
 			if (err) {
 				return next(err);
 			}
@@ -48,12 +46,12 @@ exports.save = function (req, res, next) {
 		});
 	}
 	else{
-		db.add(cate,function (err, result) {
+		db.add(req.body.cate,function (err, result) {
 			if (err) {
 				res.jsonp({res:false, dec:"添加目录失败！"+err});
 			}
-      else
-			  res.jsonp({res:true, dec:"添加目录成功！", u:"/cate"});
+			else
+				res.jsonp({res:true, dec:"添加目录成功！", u:"/cate"});
 		});
 	}
 };

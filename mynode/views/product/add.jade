@@ -26,7 +26,7 @@ block content
       display: inline;
     }
 
-  form(class="form-horizontal", action="/product/save/"+(product && product._id || ""), method="post")
+  form(class="form-horizontal", action="/product/save/"+(product && product.productID || ""), method="post")
     include ../menu
     .container
       section(id="list")

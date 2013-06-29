@@ -1,14 +1,20 @@
 var util = require('util');
 var mongoose = require('mongoose');
 var models = require('../model/auth');
-
 var Auth = models.Auth;
+var dburl = require("../config").db;//数据库地址
 
+exports.connect = function(callback) {
+    mongoose.connect(dburl);
+}
+
+exports.disconnect = function(callback) {
+    mongoose.disconnect(callback);
+}
 
 exports.add = function(postauth,callback) {
     var newauth = new Auth();
     newauth.authName = postauth.authName;
-    util.log(postauth.authName);
     Auth.find({}).sort('-authID').limit(1).exec(function(err, maxauth){
         if(err){
             util.log("FATAL"+err);
@@ -55,12 +61,12 @@ exports.edit = function(id, postauth, callback) {
     });
 }
 
-exports.allAuths = function(callback) {
-    Auth.find({}, callback);
+exports.all = function(callback) {
+    Auth.find({}).sort('authID').exec(callback);
 }
 
 var findAuthById = exports.findAuthById = function(id,callback){
-    Auth.findOne({_id:id},function(err,doc){
+    Auth.findOne({authID:id},function(err,doc){
         if (err) {
             util.log('FATAL '+ err);
             callback(err, null);

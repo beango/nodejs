@@ -2,11 +2,11 @@
 
 var util = require('util');
 var config = require('../config');
-var mongoose = require('mongoose');
-var db = require('../dao/authDao');
+var dbtype = require('../config').dbtype;
+var db = require(dbtype + 'authDao');
 
 exports.index = function (req, res, next) {
-    db.allAuths(function (err, auths) {
+    db.all(function (err, auths) {
         if (err) {
             return next(err);
         }
@@ -32,10 +32,10 @@ exports.edit = function (req, res, next) {
 };
 
 exports.save = function (req, res, next) {
-    var authPost = mongoose.model('Auth');
-    var auth = new Auth(req.body.authinfo);
-	if(auth._id){
-		db.edit(auth._id,auth,function (err, result) {
+    var id = req.params.id;
+    var auth = req.body.authinfo;
+	if(id){
+		db.edit(id,auth,function (err, result) {
 			if (err) {
 				return next(err);
 			}

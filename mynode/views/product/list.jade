@@ -69,25 +69,17 @@ block content
           td= product.unitsInStock
           td= product.discontinued=="1"?"是":"否"
           td 
-            a(href='/product/edit/'+product._id) 修改
+            a(href='/product/edit/'+product.productID) 修改
             =" | "
-            a(href='#', onclick="javascript:proddel('#{product._id}');return false;") 删除
+            a(href='#', onclick="javascript:proddel('#{product.productID}');return false;") 删除
     div(class="pagination pagination-right")
       ul
         li
           a(href="#", style="color:#000;cursor:text;")="总记录数："+total
-        if curpage<=1
-          li(class="disabled")
-            a(href="/product/") 首页
-        else
-          li
-            a(href="/product/") 首页
-        if curpage<=1
-          li(class="disabled")
-            a(href="/product?page="+(curpage - 1)) Previous
-        else
-          li
-            a(href="/product?page="+(curpage - 1)) Previous
+        li(class=curpage<=1?"disabled":"")
+          a(href="/product/") 首页
+        li(class=curpage<=1?"disabled":"")
+          a(href="/product?page="+(curpage - 1)) Previous
         - var page = 1 
         while page<=totalpage
           if page == curpage
@@ -96,19 +88,7 @@ block content
           else
             a(href="/product?page="+page)=page
           - page++
-        if curpage>=totalpage
-          li(class="disabled")
-            a(href="/product?page="+(parseInt(curpage) + 1)) Next
-        else
-          li
-            a(href="/product?page="+(parseInt(curpage) + 1)) Next
-        if curpage>=totalpage
-          li(class="disabled")
-            a(href="/product?page="+totalpage) 尾页
-        else
-          li
-            a(href="/product?page="+totalpage) 尾页
-        li
-          input(type="text", class="input", id="topage", value=curpage)
-        li
-          a(href="javascript:void();", onclick="location.href='/product?page='+$('#topage').val();return false;") Go
+        li(class=curpage>=totalpage?"disabled":"")
+          a(href="/product?page="+(parseInt(curpage) + 1)) Next
+        li(class=curpage>=totalpage?"disabled":"")
+          a(href="/product?page="+totalpage) 尾页

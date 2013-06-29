@@ -34,8 +34,8 @@ block content
           td= role.roleID
           td= role.roleName 
           td 
-            a(href='/role/auth/'+role._id) 权限
+            a(href='/role/auth/'+role.roleID) 权限
             =" | "
-            a(href='/role/edit/'+role._id) 修改
+            a(href='/role/edit/'+role.roleID) 修改
             =" | "
-            a(href='#', onclick="javascript:roledel('#{role._id}');return false;") 删除
+            a(href='#', onclick="javascript:roledel('#{role.roleID}');return false;") 删除

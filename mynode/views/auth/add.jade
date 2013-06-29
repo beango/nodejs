@@ -26,7 +26,7 @@ block content
       display: inline;
     }
 
-  form(class="form-horizontal", action="/auth/save/", method="post")
+  form(class="form-horizontal", action="/auth/save/"+(auth==null?"":auth.authID), method="post")
     include ../menu
     .container
       section(id="list")

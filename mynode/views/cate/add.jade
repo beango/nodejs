@@ -26,11 +26,10 @@ block content
       display: inline;
     }
 
-  form(class="form-horizontal", action="/cate/save/", method="post")
+  form(class="form-horizontal", action="/cate/save/"+(cate&&cate.categoryID||""), method="post")
     include ../menu
     .container
       section(id="list")
-      input(type="hidden", name="cate[_id]", value=cate==null?"":cate._id)
       input(type="hidden", name="cate[categoryID]", value=cate==null?"":cate.categoryID)
       input(type="hidden", name="u", value=u)
       .control-group

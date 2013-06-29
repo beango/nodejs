@@ -34,6 +34,6 @@ block content
           td= auth.authID
           td= auth.authName 
           td 
-            a(href='/auth/edit/'+auth._id) 修改
+            a(href='/auth/edit/'+auth.authID) 修改
             =" | "
-            a(href='#', onclick="javascript:authdel('#{auth._id}');return false;") 删除
+            a(href='#', onclick="javascript:authdel('#{auth.authID}');return false;") 删除
